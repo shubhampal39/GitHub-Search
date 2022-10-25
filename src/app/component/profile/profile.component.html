@@ -1,0 +1,14 @@
+<mat-card *ngIf="!!profileData" class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar></div>
+    <mat-card-title>{{ profileData.firstName }}</mat-card-title>
+    <mat-card-subtitle>{{ profileData.location }}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="profileData.avtar" alt="Photo of a Shiba Inu" />
+  <mat-card-content>Following: {{ profileData.following }}</mat-card-content>
+  <mat-card-content>Followers: {{ profileData.followers }}</mat-card-content>
+  <mat-card-content>
+    Number Of Repositories: {{ profileData.noOfRepositories }}</mat-card-content
+  >
+  <a [href]="profileData.htmlUrl" target="_blank">Github Link</a>
+</mat-card>

@@ -1,0 +1,15 @@
+<form *ngIf="myForm" [formGroup]="myForm" (ngSubmit)="submitForm()" novalidate>
+  <mat-form-field class="example-full-width">
+    <input
+      matInput
+      placeholder="Search Github Profile"
+      formControlName="name"
+    />
+  </mat-form-field>
+  <br />
+  <button mat-raised-button color="primary">Search</button>
+</form>
+<h3 *ngIf="!isUser">
+  User is not found on GitHub, Please try with anather Name
+</h3>
+<app-profile class="profile" [profileData]="currentItem"></app-profile>

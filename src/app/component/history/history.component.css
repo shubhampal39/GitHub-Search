@@ -1,0 +1,22 @@
+table {
+  width: 100%;
+}
+
+.profile {
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5%;
+}
+
+button {
+  margin: 2%;
+}
+
+.borderCell {
+  border: 2px solid red;
+}
+
+.mat-header-cell {
+  color: rgba(0, 0, 0, 54);
+}
