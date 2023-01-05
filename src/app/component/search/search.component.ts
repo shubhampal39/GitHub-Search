@@ -16,7 +16,7 @@ export class SearchComponent implements OnInit {
   userName: string = '';
   destroyed: Subject<boolean> = new Subject<boolean>();
   currentItem: User;
-  isUser: boolean = true;
+  isUserFound: boolean = true;
   constructor(
     public formBuilder: FormBuilder,
     private githubService: GithubService,
@@ -54,12 +54,12 @@ export class SearchComponent implements OnInit {
             result.location,
             result.avatar_url
           );
-          this.isUser = true;
+          this.isUserFound = true;
           this.currentItem = userData;
           this.dataService.insertUserList(userData);
         },
         (error) => {
-          this.isUser = false;
+          this.isUserFound = false;
           this.currentItem = null;
           const userData = new User(this.userName);
           this.dataService.insertUserList(userData);

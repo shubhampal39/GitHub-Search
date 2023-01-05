@@ -9,7 +9,7 @@
   <br />
   <button mat-raised-button color="primary">Search</button>
 </form>
-<h3 *ngIf="!isUser">
+<h3 *ngIf="!isUserFound">
   User is not found on GitHub, Please try with anather Name
 </h3>
 <app-profile class="profile" [profileData]="currentItem"></app-profile>

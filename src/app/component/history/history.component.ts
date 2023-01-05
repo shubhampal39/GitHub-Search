@@ -20,7 +20,6 @@ export class HistoryComponent implements OnInit {
     'htmlUrl',
     'actions',
   ];
-  @ViewChild(MatTable) table: MatTable<any>;
   selectedRowIndex: any;
   userProfile: any;
   constructor(private dataService: DataService, public snackBar: MatSnackBar) {}
